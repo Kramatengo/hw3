@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    background-color: #FFFFFF;
+}
+
+#javaShopPageContainer {
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    /*
+        border: 3px solid red;
+    */
+    position: relative;
+}
+
+#javaShopPageMiddleContainer {
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    /*
+        border: 3px solid greenyellow;
+    */
+    background-color: white;
+    position: relative;
+    clear: both;
+
+}
+
+#javaShopPageHeader {
+    height: 310px;
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    /*
+        border: 1px solid #cccccc;
+
+    background-image: url(/static/images/logo.jpg);
+    */
+    background-size: contain;
+    background-repeat: no-repeat;
+    clear: both;
+}
+
+/*
+#javaShopMenuBar {
+    height: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    text-align: center;
+    float: left;
+    display: inline-block;
+    border: 1px solid lightgray;
+    background-color: white;
+    position: relative;
+    clear: both;
+}
+*/
+
+div.javaShopMenuBar {
+    background-color: lightgrey;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.javaShopMenuBar a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+
+#javaShopProductThumbsArea {
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /*
+        border: 1px solid blue;
+    */
+    background-color: white;
+    float: left;
+    display: inline-block;
+    position: relative;
+    clear: both;
+}
+
+#javaShopProductThumbsAreaLabel {
+    height: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    /*
+        border: 1px solid blue;
+    */
+    background-color: white;
+    float: left;
+    display: inline-block;
+    position: relative;
+    clear: both;
+}
+
+.javaShopProductThumbFrameContainer {
+    height: 250px;
+    width: 250px;
+    margin-right: auto;
+    margin-left: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+    float: left;
+    /*
+    border: 1px solid red;
+*/
+    position: relative;
+    box-shadow: 5px 5px 5px 5px gray;
+    border-radius: 5px;
+}
+
+
+.javaShopProductThumbIdLabelContainer {
+    height: 25px;
+    width: 250px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+    /*
+        border: 1px solid gold;
+    */
+    text-align: center;
+}
+
+.javaShopProductThumbIdContainer {
+    height: 25px;
+    width: 250px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    float: left;
+    /*
+        border: 1px solid gold;
+    */
+    text-align: center;
+}
+
+.javaShopProductThumbNameLabelContainer {
+    height: 25px;
+    width: 250px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+    /*
+        border: 1px solid gold;
+    */
+    text-align: center;
+}
+
+.javaShopProductThumbNameContainer {
+    height: 50px;
+    width: 250px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+    /*
+        border: 1px solid gold;
+    */
+    text-align: center;
+}
+
+.javaShopProductThumbPriceLabelContainer {
+    height: 25px;
+    width: 250px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+    /*
+        border: 1px solid gold;
+    */
+    text-align: center;
+}
+
+.javaShopProductThumbPriceContainer {
+    height: 25px;
+    width: 250px;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+    /*
+        border: 1px solid gold;
+    */
+    text-align: center;
+}

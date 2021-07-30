@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.javaShopMenuText {
+    font: 24px Arial, Helvetica, sans-serif;
+    color: black;
+    line-height:24px;
+    letter-spacing:0.1em;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.javaShopProductThumbsLabelText {
+    font: 36px Arial, Helvetica, sans-serif;
+    color: black;
+    line-height:24px;
+    letter-spacing:0.1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.javaShopProductThumbsLabel {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: black;
+    line-height:16px;
+    letter-spacing:0.1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.javaShopProductThumbsSubject {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: black;
+    line-height:16px;
+    letter-spacing:0.1em;
+    text-decoration: none;
+    font-weight: normal;
+}
