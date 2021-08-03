@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание продукта | Java Web Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="keywords" content="Java, Spring, Java EE"/>
+    <meta name="description" content="Trial Java web shop "/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <link th:href="@{/css/web_shop_forms.css}" rel="stylesheet">
+    <link th:href="@{/css/web_shop_fonts.css}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="javaShopPageContainer">
+
+    <div id="javaShopPageMiddleContainer">
+
+        <div id="javaShopPageHeader">
+            <img th:src="@{/images/logo.jpg}"/>
+        </div>  <!-- javaShopPageHeader -->
+
+        <div th:class="javaShopMenuBar">
+            <a th:href="@{'/'}" class="btn btn-primary">Главная</a>
+            <a th:href="@{'/show_all'}" class="btn btn-primary">Список продуктов</a>
+            <a th:href="@{'/create'}" class="btn btn-primary">Добавить продукт</a>
+        </div>  <!-- javaShopMenuBar  -->
+
+        <div id="javaShopProductThumbsArea" ng-app="ngpatternApp" ng-controller="ngpatternCtrl">
+
+            <div id="javaShopProductThumbsAreaLabel">
+                <span class="javaShopProductThumbsLabelText">Добавить продукт</span>
+            </div>   <!-- javaShopProductThumbsLabel -->
+
+            <form ng-app="productEntry" name="productEntryForm" method="post" th:action="@{'/create'}">
+                <div class="mb-3">
+                    <label for="productId" class="form-label">ID</label>
+                    <input type="number" name="id" class="form-control" id="productId" ng-model="myProductId" ng-pattern="idRegex" required>
+                    <span style="color:red" ng-show="productEntryForm.id.$dirty && productEntryForm.id.$invalid">
+                    <span ng-show="productEntryForm.id.$error.required">Введите целое положительное число.</span>
+                    </span>
+
+                </div>
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Название</label>
+                    <input type="text" name="title" class="form-control" id="productName" ng-model="myTitle" ng-pattern="titleRegex" required>
+                    <span style="color:red" ng-show="productEntryForm.title.$dirty && productEntryForm.title.$invalid">
+                    <span ng-show="productEntryForm.title.$error.required">Введите алафавитно-цифровые символы.</span>
+                    </span>
+
+                </div>
+                <div class="mb-3">
+                    <label for="productPrice" class="form-label">Цена (руб.)</label>
+                    <input type="number" name="price" class="form-control" id="productPrice" ng-model="myPrice" ng-pattern="priceRegex" required>
+                    <span style="color:red" ng-show="productEntryForm.price.$dirty && productEntryForm.price.$invalid">
+                    <span ng-show="productEntryForm.price.$error.required">Введите целое положительное число.</span>
+                    </span>
+
+                </div>
+                <button class="btn btn-primary" type="submit"
+                         ng-disabled="productEntryForm.id.$dirty && productEntryForm.id.$invalid ||
+                         productEntryForm.title.$dirty && productEntryForm.title.$invalid ||
+                         productEntryForm.price.$dirty && productEntryForm.price.$invalid">Сохранить
+                </button>
+
+
+            </form>
+
+
+        </div>  <!-- avaShopProductThumbsArea  -->
+
+    </div>  <!-- javaShopPageMiddleContainer -->
+
+</div>  <!-- javaShopPageContainer  -->
+
+
+<script>
+    var app = angular.module('ngpatternApp', []);
+    app.controller('ngpatternCtrl', function ($scope) {
+        $scope.idRegex = '^[1-9]+[0-9]*$';
+        $scope.titleRegex = '^[a-zA-Zа-яА-Я0-9]+$';
+        $scope.priceRegex = '^[1-9]+[0-9]*$';
+    });
+</script>
+
+
+</body>
+</html>

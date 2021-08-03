@@ -1,0 +1,13 @@
+server:
+  port: 8186
+
+  servlet:
+    context-path: /app
+
+# Additional Spring thymeleaf configurations
+#spring:
+#  thymeleaf:
+# Where web pages stored
+#    prefix: classpath:/templates
+# What is web page suffix by default
+#    suffix: .jsp
